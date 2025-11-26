@@ -1,0 +1,14 @@
+sql_service_url = 'http://127.0.0.1:5000/get_tablerag_response'
+
+config_mapping = {
+    "qwen-flash": {
+        "url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "model": "qwen-flash",
+        "api_key": "sk-1c406031a3e1468c8d734e44e03bcf0e"
+    },
+    "qwen2.5-72b-instruct": {
+        "url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+        "model": "qwen2.5-72b-instruct",
+        "api_key": "sk-bcd5378bfc504f0f86850e8f79bde0db"
+    }
+}
