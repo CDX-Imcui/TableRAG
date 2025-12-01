@@ -7,7 +7,7 @@ from typing import Dict, Any, Optional
 import os
 import hashlib
 import time
-from online_inference.config import *
+# from online_inference.config import sql_service_url ,config_mapping
 import httpx
 
 

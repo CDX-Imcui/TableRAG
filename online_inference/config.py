@@ -10,5 +10,15 @@ config_mapping = {
         "url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
         "model": "qwen2.5-72b-instruct",
         "api_key": "sk-bcd5378bfc504f0f86850e8f79bde0db"
+    },
+    "qwen2.5:7b": {
+        "url": "http://localhost:11434/v1",
+        "model": "qwen2.5:7b",
+        "api_key": "sk-"
+    },
+    "qwen3:30b": {
+        "url": "http://localhost:11434/v1",
+        "model": "qwen3:30b",
+        "api_key": "sk-qwen3-30b"
     }
 }

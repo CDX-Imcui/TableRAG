@@ -64,7 +64,7 @@ def single_llm_eval(case: Dict = None):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="entry args")
-    parser.add_argument('--backbone', type=str, default="qwen-flash")
+    parser.add_argument('--backbone', type=str, default="qwen3:30b")
     parser.add_argument('--result_file_path', type=str,
                         default=r"../output.json", help="source file path")
     _args, _unparsed = parser.parse_known_args()
@@ -79,7 +79,7 @@ if __name__ == '__main__':
 # baseline
 # qwen-flash Final score 0.3234323432343234
 # qwen2.5-72b-instruct Final score 0.4440789473684211
-# qwen2.5-72b Final
+# qwen3:30b Final score 0.29508196721311475
 
     # def read_in_lines(file_path: str) -> List[Dict[str, Any]]:
     #     """

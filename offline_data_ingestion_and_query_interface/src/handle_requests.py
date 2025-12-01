@@ -2,7 +2,7 @@ import requests
 import time
 import json
 from typing import Optional, Dict, Any
-
+from openai import OpenAI
 model_request_config = {
     "qwen-flash": {
         "endpoint": "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation",
@@ -19,6 +19,22 @@ model_request_config = {
             "Content-Type": "application/json"
         },
         "model": "qwen2.5-72b-instruct"
+    },
+    "qwen2.5:7b": {
+        "endpoint": "http://localhost:11434/v1",
+        "headers": {
+            "Authorization": "Bearer sk-",
+            "Content-Type": "application/json"
+        },
+        "model": "qwen2.5:7b"
+    },
+    "qwen3:30b": {
+        "endpoint": "http://localhost:11434/v1",
+        "headers": {
+            "Authorization": "Bearer sk-",
+            "Content-Type": "application/json"
+        },
+        "model": "qwen3:30b"
     }
 }
 
@@ -72,7 +88,7 @@ def call_llm_api(
     return None
 
 
-def call_TONGYI_llm_api(
+def call_custom_llm_api(
         endpoint: str,
         payload: Dict[str, Any],
         headers: Optional[Dict[str, str]] = None,
@@ -94,17 +110,15 @@ def call_TONGYI_llm_api(
 
     for attempt in range(max_retries + 1):
         try:
-            response = requests.post(
-                endpoint,
-                json=payload,
-                headers=headers,
-                timeout=30
+            client = OpenAI(
+                api_key="sk-bcd5378bfc504f0f86850e8f79bde0db",
+                base_url=endpoint
             )
-            response.raise_for_status()
-            result = response.json()
-            # 解析 LLM 输出
-            raw_output = result["output"]["text"]
-            return raw_output
+            resp = client.chat.completions.create(
+                model='qwen2.5:7b',
+                messages=payload['input']['messages']
+            )
+            return resp.choices[0].message.content
         except (requests.exceptions.RequestException,
                 requests.exceptions.JSONDecodeError,
                 json.JSONDecodeError,
@@ -125,7 +139,7 @@ def call_TONGYI_llm_api(
 def get_llm_response(
     system_prompt: Optional[str],
     user_prompt: str,
-    model: str = "qwen2.5-72b-instruct",
+    model: str = "qwen3:30b",
 ) -> Optional[str]:
     model_config = model_request_config.get(model)
     if not model_config:
@@ -142,7 +156,7 @@ def get_llm_response(
         ]}
     }
 
-    resp_content = call_TONGYI_llm_api(
+    resp_content = call_custom_llm_api(
         endpoint=model_endpoint,
         payload=payload,
         headers=model_headers
@@ -154,7 +168,7 @@ if __name__ == "__main__":
     # Example usage
     system_prompt = "You are a helpful assistant."
     user_prompt = "What is the capital of France?"
-    model = "qwen-flash"
+    model = "qwen3:30b"
 
     response = get_llm_response(system_prompt, user_prompt, model)
     if response:
