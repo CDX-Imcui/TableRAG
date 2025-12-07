@@ -111,11 +111,12 @@ def call_custom_llm_api(
     for attempt in range(max_retries + 1):
         try:
             client = OpenAI(
-                api_key="sk-bcd5378bfc504f0f86850e8f79bde0db",
+                api_key="sk-1c406031a3e1468c8d734e44e03bcf0e",
                 base_url=endpoint
             )
             resp = client.chat.completions.create(
-                model='qwen2.5:7b',
+                # model='qwen2.5:7b',
+                model=payload["model"],
                 messages=payload['input']['messages']
             )
             return resp.choices[0].message.content

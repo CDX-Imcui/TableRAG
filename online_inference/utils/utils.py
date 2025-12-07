@@ -1,5 +1,6 @@
 import json
 import csv
+from openpyxl import load_workbook
 
 def read_in(file_path) :
     """
@@ -92,3 +93,49 @@ def read_plain_csv(file_path) :
         return f"Error: File {file_path} not Found"
     except Exception as e :
         return f"Error reading CSV file: {str(e)}"
+
+
+def read_excel_to_markdown(file_path):
+    # 1. data_only=True 确保读取的是值而不是公式
+    workbook = load_workbook(file_path, data_only=True)
+
+    content = []
+    file_name = file_path.split("/")[-1]
+    table_name = file_name.replace(".xlsx", "")
+
+    content.append(f"Table name: {table_name}")
+
+    # 获取所有 sheet 名称
+    sheet_names = workbook.sheetnames
+    # 判断是否需要显示 Sheet 标题（多于1个才显示）
+    show_sheet_title = len(sheet_names) > 1
+
+    for sheet_name in sheet_names:
+        work_sheet = workbook[sheet_name]
+
+        # 仅在多 Sheet 模式下添加 Sheet 标题
+        if show_sheet_title:
+            content.append(f"\n### Sheet: {sheet_name}")
+
+        rows = list(work_sheet.iter_rows(values_only=True))
+        if not rows:
+            content.append("*Empty Sheet*")
+            continue
+
+        for i, row in enumerate(rows):
+            # 2. 修复类型错误和None值
+            clean_row = [str(cell) if cell is not None else "" for cell in row]
+            # 处理换行符
+            clean_row = [cell.replace("\n", "<br>") for cell in clean_row]
+
+            content.append("| " + " | ".join(clean_row) + " |")
+
+            # 3. 添加表头分隔符
+            if i == 0:
+                content.append("| " + " | ".join(["---"] * len(clean_row)) + " |")
+
+    return "\n".join(content)
+
+
+if __name__ == '__main__' :
+    print(read_excel_to_markdown("../data/dev_excel/1st_New_Zealand_Parliament_0.xlsx"))

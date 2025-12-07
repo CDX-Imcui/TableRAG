@@ -52,7 +52,7 @@ class SemanticRetriever :
             self.chunk_index = chunk_index
             self.chunk_file_index = chunk_file_index
             doc_embeddings = self.embed_doc(chunks, save_path=save_path)
-        
+
         self.thread_local = threading.local()
         self.index_lock = threading.RLock()
 
@@ -82,17 +82,17 @@ class SemanticRetriever :
                 encode_vecs.append(batch_embeddings)
             else :
                 encode_vecs.extend(batch_embeddings)
-                 
+
         encode_vecs = np.array(encode_vecs)
         if len(encode_vecs.shape) == 3 :
             encode_vecs = encode_vecs.reshape(-1, encode_vecs.shape[-1])
-        
+
         if save_path :
             self.save_embeddings(encode_vecs, chunks, save_path)
             print("Embedding Vectors Saved.")
-        
+
         return encode_vecs
-    
+
     def save_embeddings(self, embeddings: Any, chunks: List[str], save_path: str) -> None :
         """
         Save embeddings and optionally the original chunks.
@@ -130,7 +130,7 @@ class SemanticRetriever :
             with open(load_path, 'rb') as f :
                 data = pickle.load(f)
             return data['embeddings'], data['chunks'], data['chunk_file_index']
-        
+
     def build_index(self, dense_vector: Any) -> Any :
         print("Building Index.")
         with self.index_lock :
@@ -146,10 +146,17 @@ class SemanticRetriever :
             return index_gpu
 
     def retrieve(self, query, recall_num, rerank_num) :
+        """
+        调用 self.recall，从向量索引里取出与 query 最相似的 recall_num 个文档片段 docs，以及它们对应的原始文件名 ori_file_name。
+        再调用 self.rerank，对这批候选 docs 做精排，只保留 rerank_num 个最相关的：
+            reranked_docs：排好序后的文本片段。
+            rerank_scores：对应的相关性分数。
+            filenames：对应的原始文件名。
+        """
         docs, ori_file_name = self.recall(query, recall_num)
         reranked_docs, rerank_scores, filenames = self.rerank(query, docs, rerank_num, ori_file_name)
         return reranked_docs, rerank_scores, filenames
-        
+
     def recall(self, query: str, topn:int) -> List[str] :
         query_emb = self.embed_doc(query)
         with self.index_lock :
@@ -159,10 +166,10 @@ class SemanticRetriever :
         return ori_docs, ori_file_name
 
     def rerank(self, query: str, docs: List[str], topn: int, ori_file_name: List[str]) -> Tuple[List[str], List[int]] :
-        pairs = [[query, d] for d in docs]
-        scores = self.reranker.compute_score(pairs)
-        sroted_pairs = sorted(zip(scores, docs, ori_file_name), reverse=True)
-        score_sorted, doc_sorted, filename_sorted = zip(*sroted_pairs)
+        pairs = [[query, d] for d in docs]      # 构造 [query, 文档片段] 的成对输入列表，给交叉编码重排模型用
+        scores = self.reranker.compute_score(pairs) # 对每个 [query, doc] 输出一个相关性分数
+        sroted_pairs = sorted(zip(scores, docs, ori_file_name), reverse=True) #打包在一起，按分数从高到低排序
+        score_sorted, doc_sorted, filename_sorted = zip(*sroted_pairs) # 再拆开成 3 个对齐的列表：分数、文本、文件名
         return doc_sorted[:topn], score_sorted[: topn], filename_sorted[: topn]
 
 
@@ -195,7 +202,7 @@ class MixedDocRetriever :
             content = excel_to_markdown(os.path.join(excel_dir_path, file))
             excel_content = content
             all_docs[file] = excel_content
-        
+
         for file in tqdm(os.listdir(doc_dir_path)) :
             with open(os.path.join(doc_dir_path, file), 'r', encoding="utf-8") as fin :
                 data_split = json.load(fin)

@@ -1,10 +1,9 @@
-import sys
-from openpyxl import load_workbook
 import torch
 from typing import Union, List, Tuple
 from transformers import AutoTokenizer, AutoModel, AutoModelForSequenceClassification
 from tqdm import tqdm
 import numpy as np
+from openpyxl import load_workbook
 
 def sigmoid(x) :
     return 1 / (1 + np.exp(-x))
@@ -136,7 +135,7 @@ class Reranker :
             all_scores = [sigmoid(score) for score in all_scores]
         
         return all_scores
-    
+
 def excel_to_markdown(file_path) :
     workbook = load_workbook(file_path)
 

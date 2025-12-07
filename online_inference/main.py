@@ -9,7 +9,7 @@ from chat_utils import *
 from tools.retriever import *
 from tools.sql_tool import *
 from config import *
-from utils.utils import read_in, read_in_lines, read_plain_csv
+from utils.utils import read_in, read_in_lines, read_plain_csv, read_excel_to_markdown
 from typing import Dict, Tuple, Any
 import threading
 import traceback
@@ -146,8 +146,9 @@ class TableRAG() :
 
         while current_iter :
             current_iter -= 1
+            # Step 1: LLM 决策。基于当前的上下文判断是直接给出 <Answer>，还是调用工具 solve_subquery。
             response = self.get_llm_response(text_messages=text_messages, tools=tools, backbone=backbone, select_config=select_config)
-
+            # 如果 LLM 认为信息不足，它会生成一个自然语言的 subquery（子问题）。extract_subquery 返回推理文本 + 子问题列表 + 对应的 tool_call_id
             reasoning, sub_queries, tool_call_ids = self.extract_subquery(response, backbone=backbone)
             logger.info(f"Step {self.max_iter - current_iter}: {sub_queries}")
 
@@ -167,6 +168,7 @@ class TableRAG() :
             text_messages.append(messages)
 
             for sub_query, tool_call_id in zip(sub_queries, tool_call_ids) :
+                # Step 2: 混合执行。针对每个子问题跑 ExcelRAG 和 SQL
                 reranked_docs, _, _ = self.retriever.retrieve(sub_query, 30, 5)
                 unique_retriebed_docs = list(set(reranked_docs))
                 doc_content = "\n".join([r for r in unique_retriebed_docs[:3]])
@@ -182,7 +184,7 @@ class TableRAG() :
                     schema = excel_rag_response['nl2sql_prompt'].split('Based on the schemas above, please use MySQL syntax to solve the following problem')[0].strip()
                 except :
                     sql_str, sql_execute_result, schema = "ExcelRAG execute fails, key does not exists."
-
+                # Step 3: 信息融合。使用 COMBINE_PROMPT 将上述检索到的 Docs + SQL Result + Schema 拼接在一起，调用LLM生成一个“Subquery Answer”
                 combine_prompt_formatted = COMBINE_PROMPT.format(
                     docs=doc_content, 
                     schema=schema, 
@@ -201,6 +203,8 @@ class TableRAG() :
                     answer = ""
                 
                 logger.info(f"LLM Subquery Answer: {answer}")
+
+                # Step 4: 更新记忆。将 Tool 的执行结果（即 LLM 融合后的 Subquery Answer）追加到对话历史中，进入下一轮循环。
                 execution_message = {
                     "role": "tool",
                     "tool_call_id": tool_call_id,
@@ -214,11 +218,17 @@ class TableRAG() :
     def construct_initial_prompt(self, case: dict, top1_table_name: str) -> Any :
         query = case["question"]
 
-        table_id = top1_table_name + ".csv"
-        csv_file_path = os.path.join(self.config.excel_dir, table_id)
-        if os.path.exists(csv_file_path) :
-            markdown_text = read_plain_csv(csv_file_path)
-        else :
+        # table_id = top1_table_name + ".csv"
+        # csv_file_path = os.path.join(self.config.excel_dir, table_id)
+        # if os.path.exists(csv_file_path) :
+        #     markdown_text = read_plain_csv(csv_file_path)
+        # else :
+        #     markdown_text = "Can NOT find table content!"
+        table_id = top1_table_name + ".xlsx"
+        xlsx_file_path = os.path.join(self.config.excel_dir, table_id)
+        if os.path.exists(xlsx_file_path):
+            markdown_text = read_excel_to_markdown(xlsx_file_path)
+        else:
             markdown_text = "Can NOT find table content!"
         
         inital_prompt = SYSTEM_EXPLORE_PROMPT.format(query=query, table_content=markdown_text)
