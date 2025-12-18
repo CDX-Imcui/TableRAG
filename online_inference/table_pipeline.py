@@ -128,10 +128,9 @@ Output JSON only:
     # PHASE 2: 在线推理 (Online Inference)
     # =========================================================================
 
-    def _get_top_k_indices(self, query: str, embeddings: torch.Tensor, top_k: int) -> List[int]:
+    def _get_top_k_indices(self, query_emb: torch.Tensor, embeddings: torch.Tensor, top_k: int) -> List[int]:
         """统一检索核心：处理 Query 编码与相似度计算"""
         if embeddings is None: return []
-        query_emb = torch.tensor(self.embedder.encode(query)).squeeze()
         # 计算点积相似度
         scores = torch.matmul(embeddings, query_emb)
         top_results = torch.topk(scores, k=min(top_k, embeddings.shape[0]))
@@ -276,10 +275,11 @@ Output JSON only:
         推理入口：结合自适应子表与精简 KV 文本
         """
         print(f"\n=== 🚀 Hybrid Query: {question} ===")
+        query_emb = torch.tensor(self.embedder.encode(question)).squeeze()
 
         # 1. 意图分析与锚点检索
         intent = self._analyze_query_intent(question)
-        anchor_ids = self._get_top_k_indices(question, self.table_embeddings, top_k=top_k_rows)
+        anchor_ids = self._get_top_k_indices(query_emb, self.table_embeddings, top_k=top_k_rows)
         anchor_entities = [self.df.iloc[rid][self.pk_col] for rid in anchor_ids]
 
         # 2. 自适应行半径扩展
@@ -295,7 +295,7 @@ Output JSON only:
         # 5. 文本侧检索与 50% 精简
         pruned_text = ""
         if self.text_embeddings is not None:
-            top_text_ids = self._get_top_k_indices(question, self.text_embeddings, top_k=3)
+            top_text_ids = self._get_top_k_indices(query_emb, self.text_embeddings, top_k=top_k_rows)
             retrieved_raw = [self.raw_text_list[i] for i in top_text_ids]
             print("self.raw_text_list",self.raw_text_list)
             print("retrieved_raw",retrieved_raw)

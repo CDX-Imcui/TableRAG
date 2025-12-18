@@ -18,7 +18,7 @@ def main():
     pipeline = TableRAGPipeline(
         df=df,
         external_text_list=text_list,
-        llm_backbone="qwen2.5:32b",
+        llm_backbone="qwen2.5:7b",
         llm_path="./models/bge-m3"
     )
 
