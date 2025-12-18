@@ -8,8 +8,6 @@
 /online_inference/models/bge-m3/*
 /online_inference/models/bge-reranker-v2-m3/*
 /online_inference/embedding.pkl
-/cdx_test.py
-/cdx.txt
 
 /offline_data_ingestion_and_query_interface/src/app.log
 /online_inference/output.json
