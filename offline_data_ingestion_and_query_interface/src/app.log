@@ -1753,4 +1753,578 @@ If you have a different table that contains this information, please provide the
 2025-12-03 17:30:47,176 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'The provided schema does not contain information about capital cities of states,' at line 1")
 [SQL: The provided schema does not contain information about capital cities of states, so the question cannot be answered using the given table. If you have a different table with that information, please provide the correct table schema.]
 (Background on this error at: https://sqlalche.me/e/20/f405)
-                                                                                                                                                                                                                                                                                                                                                                                                                         
+                                                                                                                                                                                                                                                                                                                                                                                                                         2025-12-07 23:24:28,662 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'location' in 'where clause'")
+[SQL: SELECT `player` FROM `list_of_oldest_and_y_03b5daa4` WHERE `location` = 'Salisbury, North Carolina';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-07 23:43:27,815 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-07 23:43:27,819 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-07 23:44:34,146 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'acres' in 'field list'")
+[SQL: SELECT `acres` FROM `list_of_schools_in_perth_western_australia_7` WHERE `opened` = 1981;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 00:09:52,835 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'elevation' in 'where clause'")
+[SQL: SELECT `country` FROM `list_of_the_busiest_airports_in_central_america_4` WHERE `elevation` = '5';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 01:08:07,460 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 01:08:07,463 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 01:31:00,958 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'nationality' in 'field list'")
+[SQL: SELECT `nationality` FROM `t_2001_brazilian_grand_prix_0` WHERE `driver` = 'Ralf Schumacher';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 01:46:28,600 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_month' in 'where clause'")
+[SQL: SELECT COUNT(*) FROM `t_129th_ohio_general_assembly_1` WHERE `party` = 'Democrat' AND `birth_month` = 'June';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 01:56:42,826 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '1:23.271'")
+[SQL: SELECT `driver` FROM `t_1998_british_grand_prix_0` WHERE `lap` = '1:23.271';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 02:05:28,074 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '1:23.271'")
+[SQL: SELECT `driver` FROM `t_1998_british_grand_prix_0` WHERE `lap` = '1:23.271';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 03:04:45,989 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'weight' in 'field list'")
+[SQL: SELECT `weight` FROM `t_2009_afl_draft_2` WHERE `club` = 'Port Adelaide';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 04:45:18,850 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 04:45:18,856 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 04:46:38,173 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'city' in 'field list'")
+[SQL: SELECT `city` FROM `bowl_coalition_0` WHERE `school` = 'Oklahoma';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 04:51:03,356 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 04:51:03,358 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 04:58:54,218 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 04:58:54,220 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 08:38:43,375 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'elevation' in 'field list'")
+[SQL: SELECT `elevation` FROM `list_of_parks_in_seoul_0` WHERE `location_gu` = '131452' AND `year` = 2013;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 08:53:37,484 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 08:53:37,490 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 10:12:56,418 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '1:20.378'")
+[SQL: SELECT `driver` FROM `t_1999_canadian_grand_prix_0` WHERE `lap` = '1:20.378';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 10:19:19,960 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'completion_date' in 'where clause'")
+[SQL: SELECT `capacity` FROM `list_of_oceanian_stadiums_by_capacity_0` WHERE `completion_date` = 'March 1999' AND `cost` = 'A $690 million';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 10:20:32,181 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'completion_date' in 'where clause'")
+[SQL: SELECT `capacity` FROM `list_of_oceanian_stadiums_by_capacity_0` WHERE `completion_date` = 'March 1999' AND `cost` = 'A $690 million';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 10:21:44,742 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'completion_date' in 'where clause'")
+[SQL: SELECT `capacity` FROM `list_of_oceanian_stadiums_by_capacity_0` WHERE `completion_date` = 'March 1999' AND `cost` = 'A $ 690 million';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 10:24:57,641 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 10:24:57,647 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 10:55:49,901 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'nationality' in 'field list'")
+[SQL: SELECT `nationality` FROM `t_2000_san_marino_grand_prix_0` WHERE `driver` = 'Mika Häkkinen';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 11:48:12,031 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 11:48:12,035 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 12:17:39,755 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '2:21.6'")
+[SQL: SELECT `driver` FROM `t_1952_french_grand_prix_0` WHERE `time` = '2:21.6';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 15:06:01,922 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 15:06:01,927 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 16:07:54,037 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 16:07:54,041 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 16:56:19,891 - my_app - ERROR - No SQL statement found in the response content. Response content: 
+2025-12-08 16:56:19,894 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1065, 'Query was empty')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 17:09:14,979 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'new_game_engine' in 'where clause'")
+[SQL: SELECT `title` FROM `list_of_games_for_windows_titles_1` WHERE `new_game_engine` = 'Y' AND `added_weapons` = 'Y' AND `added_vehicles` = 'Y' AND `new_multiplayer_maps` = 'Y';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 17:10:38,585 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'new_game_engine' in 'where clause'")
+[SQL: SELECT `developer` FROM `list_of_games_for_windows_titles_1` WHERE `new_game_engine` = 'Y' AND `added_weapons` = 'Y' AND `added_vehicles` = 'Y' AND `new_multiplayer_maps` = 'Y';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 17:53:02,968 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'where clause'")
+[SQL: SELECT `pick` FROM `atlanta_hawks_draft_history_0` WHERE `birth_date` = '1999-02-28';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 18:13:11,558 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '1:15.643'")
+[SQL: SELECT `driver` FROM `t_1992_hungarian_grand_prix_0` WHERE `lap` = '1:15.643';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 20:02:39,363 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'enrollment' in 'where clause'")
+[SQL: SELECT `suburb` FROM `list_of_schools_in_greater_western_sydney_1` WHERE `enrollment` = 1500 AND `year` = 2018;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 21:53:44,790 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'winning_seasons' in 'where clause'")
+[SQL: SELECT `team` FROM `list_of_national_football_league_attendance_figures_0` WHERE `winning_seasons` = 20;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-08 23:34:44,821 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'where clause'")
+[SQL: SELECT `nation` FROM `t_1997_world_junior_figure_skating_championships_1` WHERE `birth_date` = '1979-08-01';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-09 00:30:03,161 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birthdate' in 'where clause'")
+[SQL: SELECT `residence` FROM `t_129th_ohio_general_assembly_0` WHERE `birthdate` = '1971-09-18';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-09 00:45:53,479 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '1:18.515'")
+[SQL: SELECT `driver` FROM `t_1999_hungarian_grand_prix_0` WHERE `lap` = '1:18.515';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-09 09:38:13,132 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'area_sq_km' in 'field list'")
+[SQL: SELECT `area_sq_km` FROM `irish_sea_0` WHERE `county` = 'County Down';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-09 09:40:34,013 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '2025-11-24 01:13:625'")
+[SQL: SELECT `driver` FROM `t_2001_french_grand_prix_0` WHERE `lap` = '2025-11-24 01:13:625';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-09 09:57:40,295 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't Know Me by Now'' at line 1")
+[SQL: SELECT COUNT(*) AS appearances FROM `list_of_year_end_number_one_singles_new_zealand_0` WHERE `artist` = 'Simply Red' AND `title` = 'If You Do n't Know Me by Now';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-09 09:58:32,089 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1140, "In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'TableRAG.list_of_national_natural_landmarks_in_california_0.name'; this is incompatible with sql_mode=only_full_group_by")
+[SQL: SELECT `name`, MAX(`date`) AS most_recent_date FROM `list_of_national_natural_landmarks_in_california_0`;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-09 10:15:03,666 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'miss_tennis_player' in 'where clause'")
+[SQL: SELECT `notes` FROM `miss_teen_usa_1` WHERE `miss_tennis_player` = 'Bridgette Wilson-Sampras';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-09 10:20:12,411 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.list_of_compets_visited_by_spacecraft_3' doesn't exist")
+[SQL: SELECT `name` FROM `list_of_compets_visited_by_spacecraft_3` WHERE `notes` LIKE '%%carbonaceous%%';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-09 10:23:42,210 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.list_of_secretaries_of_puerto_rico_0' doesn't exist")
+[SQL: SELECT `name` FROM `list_of_secretaries_of_puerto_rico_0` ORDER BY `left_office` DESC LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-09 10:34:01,247 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.list_of_association_72bcd9e' doesn't exist")
+[SQL: SELECT `seating_capacity` FROM `list_of_association_72bcd9e` WHERE `stadium` = 'Aviva Stadium';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-09 10:39:48,025 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1305, 'FUNCTION TableRAG.TIME_STR_TO_SEC does not exist')
+[SQL: SELECT `driver` FROM `t_2005_british_grand_prix_0` WHERE `lap` != 'No time' ORDER BY TIME_STR_TO_SEC(`lap`) LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-09 10:43:00,322 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''New York Giants`' at line 1")
+[SQL: SELECT `stadium` FROM `list_of_national_football_league_attendance_figures_1` WHERE `team` = 'New York Jets' OR `team` = 'New York Giants`;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-09 11:14:48,250 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '2025-11-24 01:15:643'")
+[SQL: SELECT `pos` FROM `t_1992_hungarian_grand_prix_0` WHERE `lap` = '2025-11-24 01:15:643';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-09 11:20:56,607 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.history_of_rugby_uni_1d65e6' doesn't exist")
+[SQL: SELECT `city` FROM `history_of_rugby_uni_1d65e6` WHERE `city` = 'Vancouver';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-09 11:21:09,732 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.history_of_rugby_uni_1d65e6' doesn't exist")
+[SQL: SELECT `venue` FROM `history_of_rugby_uni_1d65e6` WHERE `city` = 'Vancouver';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-09 11:21:22,824 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.history_of_rugby_uni_1d65e6' doesn't exist")
+[SQL: SELECT `venue` FROM `history_of_rugby_uni_1d65e6` WHERE `city` = 'Vancouver';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-09 11:35:35,501 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.Ohio_Senators' doesn't exist")
+[SQL: SELECT `representative` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `representative` IN ( SELECT `Senator_Name` FROM `Ohio_Senators` ) AND `representative` IN ( SELECT `Chancellor_Name` FROM `Ohio_Department_of_Higher_Education_Chancellors` );]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-10 11:50:45,963 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.state_population_rank' doesn't exist")
+[SQL: SELECT `rank` FROM `state_population_rank` WHERE `city` = 'Santa Rosa' AND `state` = 'California';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-10 11:56:26,065 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'dob' in 'field list'")
+[SQL: SELECT MONTH(`dob`) AS `month_of_birth` FROM `list_of_national_football_league_rushing_yards_leaders_0` WHERE `player` = 'Barry Sanders';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 12:34:50,044 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.han_hsiang_li_info' doesn't exist")
+[SQL: SELECT `birth_date` FROM `han_hsiang_li_info` WHERE `name` = 'Han Hsiang Li';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-10 12:38:41,274 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'points' in 'field list'")
+[SQL: SELECT SUM(`points`) as total_points FROM `t_2004_canadian_grand_prix_0` WHERE `constructor` = 'Ferrari';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 13:09:14,503 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM `list_of_highways_in_essex_county_new_york_1` WHERE `to` = 'NY 9N in Elizab' at line 1")
+[SQL: SELECT /* no matching columns or tables to answer the question */ FROM `list_of_highways_in_essex_county_new_york_1` WHERE `to` = 'NY 9N in Elizabethtown';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-10 13:52:31,923 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'year' in 'field list'")
+[SQL: SELECT DISTINCT `year` FROM `t_1999_canadian_grand_prix_0` WHERE `driver` = 'Eddie Irvine' AND `pos` <= 3;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 14:51:23,822 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1055, "Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'TableRAG.t_2006_in_video_gaming_1.publisher' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by")
+[SQL: SELECT `publisher` FROM `t_2006_in_video_gaming_1` GROUP BY `platform` HAVING COUNT(`platform`) = 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 15:25:54,732 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'trainer_birth_city' in 'field list'")
+[SQL: SELECT `trainer_birth_city` FROM `american_horse_of_the_year_1` WHERE `trainer` = 'Frank Y. Whiteley, Jr.';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 15:33:32,699 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'year' in 'field list'")
+[SQL: SELECT COUNT(DISTINCT `year`) FROM `t_2004_chinese_grand_prix_0` WHERE `driver` = 'Olivier Panis']
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 15:37:13,618 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `list_of_norwegian_football_league_champions_2` WHERE `leading_goalscorer` = 'Leif Eriksen (Vålerenga)']
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 15:38:19,634 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `list_of_norwegian_football_league_champions_2` WHERE `year` = '1963' AND `leading_goalscorer` = 'Leif Eriksen ( Vålerenga )';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 15:46:14,674 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column '2010_population' in 'field list'")
+[SQL: SELECT `2010_population` FROM `list_of_county_routes_in_delaware_county_new_york_0` WHERE `from` LIKE '%%NY 357 in Franklin%%' OR `to` LIKE '%%CR 14 in Franklin%%']
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 15:47:36,409 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column '2010_population' in 'field list'")
+[SQL: SELECT `2010_population` FROM `list_of_county_routes_in_delaware_county_new_york_0` WHERE `via` = 'Butts Corners Road in Davenport' AND `from` = 'NY 357 in Franklin';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 16:26:45,166 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'nationality' in 'field list'")
+[SQL: SELECT `nationality` FROM `t_2000_san_marino_grand_prix_0` WHERE `driver` = 'Mika Häkkinen';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 16:55:37,015 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1305, 'FUNCTION TableRAG.DATE_PART does not exist')
+[SQL: SELECT DATE_PART('year', AGE(CURRENT_DATE, `dob`)) AS `age` FROM `t_1999_european_grand_prix_0` WHERE `driver` = 'Luca Badoer';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 17:19:32,989 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'wins' in 'field list'")
+[SQL: SELECT COUNT(`wins`) FROM `list_of_professional_sports_teams_in_alabama_0` WHERE `club` = 'Druid City Dragons' AND `league` = 'World Basketball Association' AND `years_active` LIKE '%%2006%%';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 17:45:09,181 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_year_or_age' in 'field list'")
+[SQL: SELECT `birth_year_or_age` FROM `list_of_new_york_rangers_draft_picks_0` WHERE `player` = 'Bob Graham' AND `draft` = '1964';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 17:49:17,826 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'mascot_color' in 'field list'")
+[SQL: SELECT `mascot_color` FROM `t_2007_afl_draft_3` WHERE `club` = 'Kangaroos';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 18:51:12,898 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.ohio_senate' doesn't exist")
+[SQL: SELECT `representative` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `term_limited` IN (SELECT `term_limited` FROM `ohio_senate` WHERE `chamber` = 'Senate');]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-10 19:42:22,948 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `figure_skating_at_the_1998_winter_olympics_0` WHERE `name` IN ('Todd Eldredge', 'Michael Weiss');]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 20:08:28,574 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1140, "In aggregated query without GROUP BY, expression #1 of SELECT list contains nonaggregated column 'TableRAG.list_of_best_selling_albums_1.album'; this is incompatible with sql_mode=only_full_group_by")
+[SQL: SELECT `album`, MAX(`claimed_sales`) AS max_sales FROM `list_of_best_selling_albums_1` WHERE `album` IN ('Sgt. Pepper\'s Lonely Hearts Club Band', '1', 'Abbey Road', 'The Beatles Stereo Box Set');]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 20:58:57,464 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'division' in 'field list'")
+[SQL: SELECT `division` FROM `list_of_national_football_league_attendance_figures_2` WHERE `team` = 'Indianapolis Colts';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 21:03:12,900 - my_app - ERROR - No SQL statement found in the response content. Response content: The provided schema does not contain information about Miguel Hidalgo y Costilla or his contributions. The query cannot be generated based on the given table schema.
+2025-12-10 21:03:12,901 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'The provided schema does not contain information about Miguel Hidalgo y Costilla' at line 1")
+[SQL: The provided schema does not contain information about Miguel Hidalgo y Costilla or his contributions. The query cannot be generated based on the given table schema.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-10 21:36:13,783 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'carrier_count' in 'where clause'")
+[SQL: SELECT COUNT(DISTINCT `technology`) AS carrier_count FROM `list_of_motorola_products_16` WHERE `phone_model` = 'AURA' AND carrier_count >= 5;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 23:29:25,802 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'county' in 'field list'")
+[SQL: SELECT `county` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `residence` = 'Lancaster';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-10 23:45:39,913 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INT) >= 450000 AND CAST(REPLACE(`estimate`, ',', '') AS INT) <= 550000' at line 1")
+[SQL: SELECT `country` FROM `lebanese_people_0` WHERE CAST(REPLACE(`estimate`, ',', '') AS INT) >= 450000 AND CAST(REPLACE(`estimate`, ',', '') AS INT) <= 550000;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-11 00:06:29,816 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `list_of_serbian_football_champions_6` WHERE `top_scorer_s` LIKE '%%Stjepan Bobek%%';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 00:44:24,770 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INT) DESC LIMIT 1 OFFSET 2' at line 1")
+[SQL: SELECT `airport` FROM `list_of_the_busiest_airports_in_brazil_0` ORDER BY CAST(REPLACE(`movements`, ',', '') AS INT) DESC LIMIT 1 OFFSET 2;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-11 00:46:14,816 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'airport_code' in 'field list'")
+[SQL: SELECT `airport_code` FROM `list_of_the_busiest_airports_in_brazil_0` WHERE `airport` = 'Presidente Juscelino Kubitschek International Airport';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 16:49:21,120 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'population' in 'field list'")
+[SQL: SELECT `population` FROM `list_of_oldest_trees_1` WHERE `location` = 'Antalya' AND `country` = 'Turkey';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 17:15:16,961 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.games_winners' doesn't exist")
+[SQL: SELECT `year` FROM `british_junior_open_squash_1` WHERE `under_19` IN (SELECT `gold_medalist` FROM `games_winners`);]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-11 17:41:16,640 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT MONTH(`birth_date`) FROM `list_of_national_football_league_rushing_yards_leaders_0` WHERE `player` = 'Barry Sanders';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 18:05:10,972 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.largest_cities_by_region' doesn't exist")
+[SQL: SELECT `city` FROM `largest_cities_by_region` WHERE `region` = 'Chūbu' AND `country` = 'Japan';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-11 18:17:26,172 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'date_of_birth' in 'field list'")
+[SQL: SELECT MONTH(`date_of_birth`) AS `birth_month` FROM `t_2013_afl_draft_1` WHERE `player` = 'Marcus Bontempelli';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 18:23:23,880 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'city' in 'field list'")
+[SQL: SELECT `city` FROM `bowl_coalition_0` WHERE `school` = 'Oklahoma';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 18:24:02,003 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'city' in 'field list'")
+[SQL: SELECT `city` FROM `bowl_coalition_0` WHERE `school` = 'Oklahoma';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 19:06:19,475 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'year' in 'field list'")
+[SQL: SELECT `year` FROM `t_1999_canadian_grand_prix_0` WHERE `driver` = 'Eddie Irvine' AND `pos` <= 3 ORDER BY `year` LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 19:39:22,104 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'month_of_birth' in 'field list'")
+[SQL: SELECT `month_of_birth` FROM `t_1997_world_junior_figure_skating_championships_1` WHERE `name` = 'Elena Ivanova';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 20:27:29,162 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'city' in 'field list'")
+[SQL: SELECT `city` FROM `american_horse_of_the_year_1` WHERE `trainer` = 'Frank Y. Whiteley, Jr.']
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 20:35:22,809 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'season' in 'field list'")
+[SQL: SELECT COUNT(DISTINCT `season`) FROM `t_2004_chinese_grand_prix_0` WHERE `driver` = 'Olivier Panis';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 20:47:33,423 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column '2010_population' in 'field list'")
+[SQL: SELECT `2010_population` FROM `list_of_county_routes_in_delaware_county_new_york_0` WHERE `from` = 'NY 357 in Franklin' OR `to` = 'CR 14 in Franklin';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 20:59:03,265 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'population' in 'where clause'")
+[SQL: SELECT `county` FROM `list_of_bridges_on_t_bd320979` WHERE `population` = '281,674' AND `year` = '2010';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 21:38:04,026 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'reason' in 'field list'")
+[SQL: SELECT `reason` FROM `campeonato_paulista_1` WHERE `season` = '1908' AND `team` = 'Germânia';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 21:51:53,672 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'DATEOfBirth' in 'where clause'")
+[SQL: SELECT `director_s` FROM `list_of_submissions_95145609` WHERE `director_s` IN ('Costa-Gavras', 'Georg Lhotsky', 'Emile Degelin', 'Glauber Rocha', 'Juraj Herz', 'Lene Grønlykke and Sven Grønlykke', 'Éric Rohmer', 'Peter Fleischmann', 'Vasilis Georgiadis', 'Tang Shu Shuen', 'Sándor Sára', 'A. C. Tirulokchandar', 'Gilberto Tofano', 'Federico Fellini', 'Shōhei Imamura', 'Choi Ha-won', 'Harry Kümel', 'Armando Robles Godoy', 'Andrzej Wajda', 'Gheorghe Vitanidis') AND `director_s` = (SELECT `director_s` FROM `list_of_submissions_95145609` WHERE DATEOfBirth = '1933-11-28');]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 22:03:12,365 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'driver_birthdate' in 'field list'")
+[SQL: SELECT TIMESTAMPDIFF(YEAR, `driver_birthdate`, '1999-01-01') AS `age` FROM `t_1999_european_grand_prix_0` WHERE `driver` = 'Luca Badoer';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 22:36:40,938 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `list_of_new_york_rangers_draft_picks_0` WHERE `player` = 'Bob Graham';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 22:40:29,910 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'mascot_color' in 'field list'")
+[SQL: SELECT `mascot_color` FROM `t_2007_afl_draft_3` WHERE `club` = 'Kangaroos';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-11 23:21:44,279 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.population_table' doesn't exist")
+[SQL: SELECT `representative` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `residence` IN (SELECT `city` FROM `population_table` WHERE `population` = '10546');]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-11 23:56:43,799 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `figure_skating_at_the_1998_winter_olympics_0` WHERE `name` = 'Todd Eldredge';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 00:54:48,320 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'division' in 'field list'")
+[SQL: SELECT `division` FROM `list_of_national_football_league_attendance_figures_2` WHERE `team` = 'Indianapolis Colts';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 01:03:44,937 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '1992-08-02 01:15:643'")
+[SQL: SELECT `driver` FROM `t_1992_hungarian_grand_prix_0` WHERE `lap` = '1992-08-02 01:15:643';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 01:30:53,011 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'carrier' in 'field list'")
+[SQL: SELECT COUNT(DISTINCT `carrier`) FROM `list_of_motorola_products_16` WHERE `phone_model` = 'HINT (QA30)' AND `status` = 'available';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 01:55:00,935 - my_app - ERROR - No SQL statement found in the response content. Response content: The provided information does not mention any specific error. Therefore, an SQL statement to address an unspecified error cannot be generated. If you provide details about the error, I can help formulate an appropriate SQL statement.
+2025-12-12 01:55:00,937 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'The provided information does not mention any specific error. Therefore, an SQL ' at line 1")
+[SQL: The provided information does not mention any specific error. Therefore, an SQL statement to address an unspecified error cannot be generated. If you provide details about the error, I can help formulate an appropriate SQL statement.]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 02:26:14,103 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'main_actors' in 'field list'")
+[SQL: SELECT `main_actors` FROM `list_of_french_language_films_7` WHERE `french_title` = 'Le Dernier Métro' AND `directed_by` = 'François Truffaut';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 04:06:31,454 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INT) DESC LIMIT 1 OFFSET 2' at line 1")
+[SQL: SELECT `airport` FROM `list_of_the_busiest_airports_in_brazil_0` ORDER BY CAST(REPLACE(`movements`, ',', '') AS INT) DESC LIMIT 1 OFFSET 2;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 04:17:31,220 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'cylinders' in 'field list'")
+[SQL: SELECT COUNT(`cylinders`) FROM `turboprop_0` WHERE `manufacturer` = 'DEMC' AND `designation` = 'WJ5E';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 10:30:32,497 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'MVP_birth_year' in 'where clause'")
+[SQL: SELECT COUNT(`MVP`) FROM `big_east_men_s_basketball_tournament_0` WHERE `Venue` = 'Madison Square Garden ( New York City )' AND MVP_birth_year > 1970;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 10:44:41,282 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.list_of_submissions_1bd3eddD' doesn't exist")
+[SQL: SELECT NULL AS `birth_year_of_Javier_Torre` FROM `list_of_submissions_1bd3eddD`;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 11:04:46,887 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'YEARS AS `starting_age` FROM `t_2005_european_grand_prix_0` WHERE `driver` = 'Fe' at line 1")
+[SQL: SELECT `lap` - INTERVAL EXTRACT(YEAR FROM `lap`) YEAR + INTERVAL 6 YEARS AS `starting_age` FROM `t_2005_european_grand_prix_0` WHERE `driver` = 'Fernando Alonso';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 11:06:25,978 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.Golden_Eagle_Award_for_Best_Foreign_Language_Film_0' doesn't exist")
+[SQL: SELECT `National_title` FROM `Golden_Eagle_Award_for_Best_Foreign_Language_Film_0` WHERE `Production_country` = 'United Kingdom';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 11:11:05,105 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'\'"From \\\' a very early period \\\'"\' at line 1')
+[SQL: SELECT DISTINCT `country` FROM `list_of_british_racecourses_2` WHERE `opened` = '"From \' a very early period \'"]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 11:24:14,276 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.list_of_association_72bcd9e' doesn't exist")
+[SQL: SELECT `seating_capacity` FROM `list_of_association_72bcd9e` WHERE `stadium` = 'Aviva Stadium';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 11:26:08,382 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'position' in 'where clause'")
+[SQL: SELECT `winner` FROM `brazilian_gubernatorial_elections_2010_0` WHERE `position` = 'Minister of Mines and Energy';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 11:44:56,156 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_city' in 'where clause'")
+[SQL: SELECT `name` FROM `india_at_the_2010_asian_games_3` WHERE `birth_city` = 'Allahabad' AND `birth_year` = '1990';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 12:10:10,357 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'country' in 'field list'")
+[SQL: SELECT `album`, COUNT(DISTINCT `country`) AS `number_of_countries_charted_in` FROM `list_of_songs_recorded_by_rufus_wainwright_0` WHERE `album` IN ('Want One', 'Rufus Wainwright [ Japan ]') GROUP BY `album`;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 12:21:59,185 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'actors' in 'field list'")
+[SQL: SELECT `actors` FROM `list_of_french_language_films_7` WHERE `english_title` = 'The Last Metro';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 12:28:16,779 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.Ohio_Department_of_Higher_Education_chancellors' doesn't exist")
+[SQL: SELECT `representative` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `representative` IN ( SELECT `chancellor` FROM `Ohio_Department_of_Higher_Education_chancellors` ) AND `representative` IN ( SELECT `senator` FROM `ohio_senate_records` );]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 15:00:56,962 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'nationality' in 'field list'")
+[SQL: SELECT `nationality` FROM `t_2001_brazilian_grand_prix_0` WHERE `driver` = 'Ralf Schumacher';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 15:37:44,869 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INT) DESC LIMIT 9, 1' at line 1")
+[SQL: SELECT `metropolitan_area` FROM `metropolitan_areas_of_mexico_0` ORDER BY CAST(REPLACE(`t_2015_pop`, ',', '') AS INT) DESC LIMIT 9, 1;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 15:51:34,401 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'major_education_bill' in 'field list'")
+[SQL: SELECT `major_education_bill` FROM `list_of_female_united_states_cabinet_secretaries_0` WHERE `administration` = 'George W. Bush' LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 16:13:18,099 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'state_population_rank' in 'field list'")
+[SQL: SELECT `state_population_rank` FROM `list_of_museums_in_the_san_francisco_bay_area_4` WHERE `town_city` = 'Santa Rosa']
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 16:23:27,094 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'dob' in 'field list'")
+[SQL: SELECT MONTH(`dob`) AS `month_of_birth` FROM `list_of_national_football_league_rushing_yards_leaders_0` WHERE `player` = 'Barry Sanders';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 16:54:40,513 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.largest_cities_by_region' doesn't exist")
+[SQL: SELECT `city` FROM `largest_cities_by_region` WHERE `region` = 'Chūbu' AND `country` = 'Japan' ORDER BY `population` DESC LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 17:15:27,694 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_month' in 'field list'")
+[SQL: SELECT birth_month FROM `t_2013_afl_draft_1` WHERE `player` = 'Marcus Bontempelli';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 17:21:21,284 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'city' in 'field list'")
+[SQL: SELECT `city` FROM `bowl_coalition_0` WHERE `school` = 'Oklahoma';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 17:57:32,031 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.list_of_football_stadia_in_the_republic_of_macedonia_0' doesn't exist")
+[SQL: SELECT `stadium`, `capacity`, `city`, `club`, `opened` FROM `list_of_football_stadia_in_the_republic_of_macedonia_0` WHERE `city` = 'Goce Delčev';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 18:18:18,866 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'year' in 'field list'")
+[SQL: SELECT DISTINCT `year` FROM `t_1999_canadian_grand_prix_0` WHERE `driver` = 'Eddie Irvine' AND `pos` <= 3;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:00:56,850 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT MONTH(`birth_date`) AS `month_of_birth` FROM `t_1997_world_junior_figure_skating_championships_1` WHERE `name` = 'Elena Ivanova';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:20:16,066 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1055, "Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'TableRAG.t_2006_in_video_gaming_1.publisher' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by")
+[SQL: SELECT `publisher` FROM `t_2006_in_video_gaming_1` GROUP BY `platform` HAVING COUNT(`platform`) = 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 19:25:23,296 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'location' in 'field list'")
+[SQL: SELECT `location` FROM `t_2006_in_video_gaming_1` WHERE `publisher` = 'Square Enix';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 20:04:25,710 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'trainer_birth_city' in 'field list'")
+[SQL: SELECT `trainer_birth_city` FROM `american_horse_of_the_year_1` WHERE `trainer` = 'Frank Y. Whiteley, Jr.']
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 20:13:23,759 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'year' in 'field list'")
+[SQL: SELECT COUNT(DISTINCT `year`) AS seasons FROM `t_2004_chinese_grand_prix_0` WHERE `driver` = 'Olivier Panis';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 20:21:09,436 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.leif_eriksen_biography' doesn't exist")
+[SQL: SELECT `birth_date` FROM `leif_eriksen_biography` WHERE `name` = 'Leif Eriksen';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-12 20:28:15,831 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column '2010_population' in 'field list'")
+[SQL: SELECT `2010_population` FROM `list_of_county_routes_in_delaware_county_new_york_0` WHERE `from` LIKE '%%Franklin%%' OR `to` LIKE '%%Franklin%%';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 21:23:01,308 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `t_1995_nascar_supertruck_series_presented_by_craftsman_0` WHERE `winning_driver` = 'Butch Miller';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 21:27:31,149 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'nationality' in 'field list'")
+[SQL: SELECT `nationality` FROM `t_2000_san_marino_grand_prix_0` WHERE `driver` = 'Mika Häkkinen';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 22:19:38,260 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'fans_name' in 'field list'")
+[SQL: SELECT `fans_name` FROM `deloitte_football_money_league_5` WHERE `club` = 'Everton';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 22:42:52,050 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_year_or_age' in 'field list'")
+[SQL: SELECT `birth_year_or_age` FROM `list_of_new_york_rangers_draft_picks_0` WHERE `player` = 'Bob Graham';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 23:37:49,348 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `t_2004_lpga_tour_0` WHERE `winner` = 'Karen Stupples ( 1 )';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-12 23:43:10,362 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.population_data' doesn't exist")
+[SQL: SELECT `representative` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `residence` IN (SELECT `city` FROM `population_data` WHERE `population` = '10546');]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-13 00:26:43,609 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'driver_birthdate' in 'field list'")
+[SQL: SELECT YEAR('2010-01-01') - YEAR(`driver_birthdate`) AS `birth_year_or_age` FROM `t_2010_masters_of_formula_3_0` WHERE `driver` = 'Alexander Sims';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-13 01:49:18,957 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'division' in 'field list'")
+[SQL: SELECT `division` FROM `list_of_national_football_league_attendance_figures_2` WHERE `team` = 'Indianapolis Colts';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-13 02:06:55,532 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birthplace' in 'field list'")
+[SQL: SELECT `birthplace` FROM `list_of_female_united_states_cabinet_secretaries_0` WHERE `administration` = 'George H. W. Bush' LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-13 04:18:35,811 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date_or_age' in 'field list'")
+[SQL: SELECT `birth_date_or_age` FROM `john_parrott_1` WHERE `opponent_in_the_final` IN ('Mike Hallett', 'Jimmy White');]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-13 04:25:30,585 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'county' in 'field list'")
+[SQL: SELECT `county` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `residence` = 'Bowling Green' LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-13 04:26:21,730 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'county' in 'field list'")
+[SQL: SELECT `county` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `residence` = 'Bowling Green' LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-13 04:38:31,924 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INT) DESC LIMIT 1 OFFSET 1' at line 1")
+[SQL: SELECT `city` FROM `list_of_cities_in_burma_0` ORDER BY CAST(REPLACE(`t_2014_census`, ',', '') AS INT) DESC LIMIT 1 OFFSET 1;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-13 22:43:28,993 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.judd_trump_0' doesn't exist")
+[SQL: SELECT `championship` FROM `john_parrott_0` WHERE `outcome` IN ('Winner', 'Runner-up') AND `championship` IN (SELECT `championship` FROM `judd_trump_0` WHERE `outcome` = 'Winner');]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-13 22:45:14,221 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.judd_trump_wins' doesn't exist")
+[SQL: SELECT `championship` FROM `john_parrott_0` WHERE `outcome` IN ('Winner', 'Runner-up') AND `championship` IN (SELECT `championship` FROM `judd_trump_wins`);]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-13 23:06:36,068 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1525, "Incorrect DATETIME value: '2025-11-24 01:13:625'")
+[SQL: SELECT `driver` FROM `t_2001_french_grand_prix_0` WHERE `lap` = '2025-11-24 01:13:625';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 00:10:14,992 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'director_s_birth_year' in 'where clause'")
+[SQL: SELECT `director_s` FROM `list_of_submissions_1bd3eddd` WHERE `result` = 'Not Nominated' AND YEAR(`director_s_birth_year`) = 1944;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 00:12:25,757 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'director_s_birth_year' in 'where clause'")
+[SQL: SELECT `director_s` FROM `list_of_submissions_1bd3eddd` WHERE `result` = 'Not Nominated' AND YEAR(`director_s_birth_year`) = 1944;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 00:21:42,465 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'weight' in 'field list'")
+[SQL: SELECT `weight` FROM `t_2009_afl_draft_2` WHERE `player` = 'Jack Trengove';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 00:32:13,289 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'date_of_birth' in 'field list'")
+[SQL: SELECT MONTH(`date_of_birth`) AS `month_of_birth` FROM `list_of_national_football_league_rushing_yards_leaders_0` WHERE `player` = 'Barry Sanders';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 00:42:50,022 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 't Know Me by Now' AND `weeks_at_number_one` > 0' at line 1")
+[SQL: SELECT COUNT(*) FROM `list_of_year_end_number_one_singles_new_zealand_0` WHERE `artist` = 'Simply Red' AND `title` = 'If You Do n't Know Me by Now' AND `weeks_at_number_one` > 0;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-14 00:51:54,692 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.list_of_cities_by_region_j_0' doesn't exist")
+[SQL: SELECT `city_name` FROM `list_of_cities_by_region_j_0` WHERE `region` = 'Chūbu' AND `country` = 'Japan' ORDER BY `population` DESC LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-14 01:07:20,401 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'player_birthdate' in 'field list'")
+[SQL: SELECT MONTH(`player_birthdate`) AS `birth_month` FROM `t_2013_afl_draft_1` WHERE `player` = 'Marcus Bontempelli';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 02:53:12,376 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1055, "Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'TableRAG.t_2006_in_video_gaming_1.publisher' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by")
+[SQL: SELECT `publisher` FROM `t_2006_in_video_gaming_1` GROUP BY `platform` HAVING COUNT(`platform`) = 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 03:32:01,463 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'year' in 'field list'")
+[SQL: SELECT COUNT(DISTINCT `year`) FROM `t_2004_chinese_grand_prix_0` WHERE `driver` = 'Olivier Panis';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 03:35:45,179 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `list_of_norwegian_football_league_champions_2` WHERE `leading_goalscorer` = 'Leif Eriksen ( Team )';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 03:36:39,338 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `list_of_norwegian_football_league_champions_2` WHERE `leading_goalscorer` = 'Ole Stavrum']
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 03:38:12,147 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT `birth_date` FROM `list_of_norwegian_football_league_champions_2` WHERE `leading_goalscorer` = 'Per Kristoffersen ( Club )';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 03:48:36,503 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.cumberland_county_data' doesn't exist")
+[SQL: SELECT `population` FROM `cumberland_county_data` WHERE `year` = '2010';]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-14 05:47:48,979 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'state' in 'field list'")
+[SQL: SELECT `state` FROM `list_of_current_members_of_the_oklahoma_senate_0` WHERE `hometown` = 'Broken Bow';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 05:48:48,736 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'state' in 'field list'")
+[SQL: SELECT `state` FROM `list_of_current_members_of_the_oklahoma_senate_0` WHERE `hometown` = 'Broken Bow';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 05:51:51,609 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birthplace' in 'field list'")
+[SQL: SELECT `name`, `birthplace`, `birth_year` FROM `india_at_the_2010_asian_games_3` WHERE `medal` = 'Bronze';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 05:54:09,499 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.athletes' doesn't exist")
+[SQL: SELECT `name` FROM `india_at_the_2010_asian_games_3` WHERE `medal` = 'Bronze' AND `name` IN ('Vijay Kumar', 'Alok Kumar', 'Virdhawal Khade') AND `name` = (SELECT `name` FROM `athletes` WHERE `birth_place` = 'Allahabad' AND `birth_year` = '1990');]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-14 06:10:02,348 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.population_table' doesn't exist")
+[SQL: SELECT `representative` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `residence` IN (SELECT `city` FROM `population_table` WHERE `population` = '10546');]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-14 06:30:15,344 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INT) > 1993' at line 1")
+[SQL: SELECT `occurrences` FROM `list_of_nhl_playoff_series_13` WHERE `opponent` = 'Dallas Stars' AND CAST(SUBSTRING_INDEX(SUBSTRING_INDEX(`occurrences`, ',', 1), ' ', -1) AS INT) > 1993;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-14 06:31:55,795 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INT) > 1993' at line 1")
+[SQL: SELECT `occurrences` FROM `list_of_nhl_playoff_series_13` WHERE `opponent` = 'Dallas Stars' AND CAST(SUBSTRING_INDEX(SUBSTRING_INDEX(`occurrences`, ',', 1), ' ', -1) AS INT) > 1993;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-14 07:54:03,861 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'division' in 'field list'")
+[SQL: SELECT `division` FROM `list_of_national_football_league_attendance_figures_2` WHERE `team` = 'Indianapolis Colts';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 10:01:47,735 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'county' in 'field list'")
+[SQL: SELECT `county` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `residence` = 'Lancaster' LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-14 10:13:27,889 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INT) DESC LIMIT 1 OFFSET 1' at line 1")
+[SQL: SELECT `city` FROM `list_of_cities_in_burma_0` ORDER BY CAST(REPLACE(`t_2014_census`, ',', '') AS INT) DESC LIMIT 1 OFFSET 1;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-14 10:25:11,535 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1055, "Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'TableRAG.list_of_missouri_val_a5c7d974.year' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by")
+[SQL: SELECT `mvc_champion` FROM `list_of_missouri_val_a5c7d974` WHERE `runner_up` = 'Indiana State' AND `year` IN (SELECT `year` FROM `list_of_missouri_val_a5c7d974` GROUP BY `mvc_champion` HAVING COUNT(`mvc_champion`) > 1) LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 11:38:26,575 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.games_medals' doesn't exist")
+[SQL: SELECT `year` FROM `british_junior_open_squash_1` WHERE `under_19` IN (SELECT `winner` FROM `games_medals` WHERE `medal` = 'gold');]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-15 12:04:13,227 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'date_of_birth' in 'field list'")
+[SQL: SELECT MONTH(`date_of_birth`) AS `month_of_birth` FROM `list_of_national_football_league_rushing_yards_leaders_0` WHERE `player` = 'Barry Sanders';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 12:24:32,749 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'city' in 'field list'")
+[SQL: SELECT `city` FROM `list_of_microcars_by_country_of_origin_j_0` WHERE `country` = 'Japan' AND `region` = 'Chūbu' ORDER BY `population` DESC LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 12:41:58,132 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'birth_date' in 'field list'")
+[SQL: SELECT MONTH(`birth_date`) AS `birth_month` FROM `t_2013_afl_draft_1` WHERE `player` = 'Marcus Bontempelli';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 12:49:37,235 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'city' in 'field list'")
+[SQL: SELECT `city` FROM `bowl_coalition_0` WHERE `school` = 'Oklahoma' AND `games` LIKE '%%Gaylord Family–Owen Field%%';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 14:15:46,319 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'dob' in 'field list'")
+[SQL: SELECT MONTH(`dob`) AS `month_of_birth` FROM `t_1997_world_junior_figure_skating_championships_1` WHERE `name` = 'Elena Ivanova';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 14:43:53,112 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'INT) DESC LIMIT 1' at line 1")
+[SQL: SELECT `city_served` FROM `list_of_the_busiest_airports_in_central_america_4` ORDER BY CAST(REPLACE(`passengers`, ',', '') AS INT) DESC LIMIT 1;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-15 14:47:09,806 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.population_data' doesn't exist")
+[SQL: SELECT `park` FROM `list_of_parks_in_seoul_0` WHERE `location_gu` = (SELECT `location_gu` FROM `list_of_parks_in_seoul_0` WHERE `location_dong` IN (SELECT `name` FROM `population_data` WHERE `year` = '2013' AND `population` = '131,452'));]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-15 15:11:41,765 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'year' in 'field list'")
+[SQL: SELECT COUNT(DISTINCT `year`) FROM `t_2004_chinese_grand_prix_0` WHERE `driver` = 'Olivier Panis';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 17:14:33,849 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'mascot' in 'field list'")
+[SQL: SELECT `mascot`, `mascot_color` FROM `t_2007_afl_draft_3` WHERE `club` = 'Kangaroos';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 17:23:03,581 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'borough' in 'field list'")
+[SQL: SELECT `borough` FROM `list_of_nhl_playoff_series_26` WHERE `opponent` = 'Madison Square Garden';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 19:15:46,404 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.census_data' doesn't exist")
+[SQL: SELECT `lga` FROM `list_of_schools_in_perth_western_australia_6` WHERE `suburb` IN (SELECT `suburb` FROM `census_data` WHERE `population` = '90000' AND `year` = '2016');]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-15 19:17:18,364 - my_app - ERROR - SQL execution failed: (pymysql.err.ProgrammingError) (1146, "Table 'TableRAG.census_data' doesn't exist")
+[SQL: SELECT `lga` FROM `list_of_schools_in_perth_western_australia_6` WHERE `suburb` IN (SELECT `suburb` FROM `census_data` WHERE `population` = '90000' AND `year` = '2016');]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-12-15 20:11:45,442 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'country' in 'field list'")
+[SQL: SELECT COUNT(DISTINCT `country`) FROM `list_of_songs_recorded_by_rufus_wainwright_0` WHERE `album` = '11:11';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 21:20:07,303 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'main_actors' in 'field list'")
+[SQL: SELECT `main_actors` FROM `list_of_french_language_films_7` WHERE `english_title` = 'The Last Metro' OR `french_title` = 'Le Dernier Métro';]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-12-15 21:53:26,116 - my_app - ERROR - SQL execution failed: (pymysql.err.OperationalError) (1054, "Unknown column 'county' in 'field list'")
+[SQL: SELECT `county` FROM `ohio_house_of_representatives_127th_general_assembly_0` WHERE `residence` = 'Bowling Green']
+(Background on this error at: https://sqlalche.me/e/20/e3q8)

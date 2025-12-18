@@ -35,6 +35,20 @@ model_request_config = {
             "Content-Type": "application/json"
         },
         "model": "qwen3:30b"
+    },"qwen2.5:32b": {
+        "endpoint": "http://localhost:11434/v1",
+        "headers": {
+            "Authorization": "Bearer sk-",
+            "Content-Type": "application/json"
+        },
+        "model": "qwen2.5:32b"
+    },"qwen2.5:72b": {
+        "endpoint": "http://localhost:11434/v1",
+        "headers": {
+            "Authorization": "Bearer sk-",
+            "Content-Type": "application/json"
+        },
+        "model": "qwen2.5:72b"
     }
 }
 
@@ -117,8 +131,10 @@ def call_custom_llm_api(
             resp = client.chat.completions.create(
                 # model='qwen2.5:7b',
                 model=payload["model"],
-                messages=payload['input']['messages']
+                messages=payload['input']['messages'],
+                temperature=0.1
             )
+            # print(payload["model"])
             return resp.choices[0].message.content
         except (requests.exceptions.RequestException,
                 requests.exceptions.JSONDecodeError,
@@ -140,7 +156,7 @@ def call_custom_llm_api(
 def get_llm_response(
     system_prompt: Optional[str],
     user_prompt: str,
-    model: str = "qwen3:30b",
+    model: str = "qwen2.5:72b",
 ) -> Optional[str]:
     model_config = model_request_config.get(model)
     if not model_config:
@@ -169,7 +185,8 @@ if __name__ == "__main__":
     # Example usage
     system_prompt = "You are a helpful assistant."
     user_prompt = "What is the capital of France?"
-    model = "qwen3:30b"
+    model = "qwen2.5:32b"
+    # model = "qwen2.5:72b"
 
     response = get_llm_response(system_prompt, user_prompt, model)
     if response:

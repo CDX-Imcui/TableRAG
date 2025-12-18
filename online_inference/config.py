@@ -21,9 +21,14 @@ config_mapping = {
         "model": "qwen2.5:7b",
         "api_key": "sk-"
     },
-    "qwen3:30b": {
+    "qwen2.5:32b": {
         "url": "http://localhost:11434/v1",
-        "model": "qwen3:30b",
-        "api_key": "sk-qwen3-30b"
+        "model": "qwen2.5:32b",
+        "api_key": "sk-cdsc"
+    },
+    "qwen2.5:72b": {
+        "url": "http://localhost:11434/v1",
+        "model": "qwen2.5:72b",
+        "api_key": "sk-cdsc"
     }
 }

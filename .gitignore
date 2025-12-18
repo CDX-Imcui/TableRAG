@@ -4,6 +4,7 @@
 
 /online_inference/data/dev_doc/*
 /online_inference/data/dev_excel/*
+/online_inference/evaluation/evaluation.xlsx
 /online_inference/models/bge-m3/*
 /online_inference/models/bge-reranker-v2-m3/*
 /online_inference/embedding.pkl
