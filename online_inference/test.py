@@ -1,5 +1,3 @@
-from sklearn.utils.multiclass import type_of_target
-
 from config import config_mapping
 from chat_utils import get_chat_result
 import json

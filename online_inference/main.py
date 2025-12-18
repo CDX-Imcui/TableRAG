@@ -77,7 +77,7 @@ class TableRAG() :
         }]
         return tools
 
-    def extract_subquery(self, response: Any, backbone: str = 'openai') -> Tuple[str, str] :
+    def extract_subquery(self, response: Any, backbone: str = 'openai') -> Tuple[str, Optional[List[str]], Optional[List[str]]]:
         """
         Extract the subquery and reasoning process.
         """
@@ -128,8 +128,7 @@ class TableRAG() :
         query = case["question"]
         table_id = case["table_id"]
 
-        # TO BE FIXED
-        query_with_suffix = case['question'] + f"The given table is in {table_id}"
+        query_with_suffix = case["question"].rstrip() + f" The given table is in {table_id}"
 
         _, _, doc_filenaems = self.retriever.retrieve(query_with_suffix, 30, 5)
 
@@ -170,8 +169,8 @@ class TableRAG() :
             for sub_query, tool_call_id in zip(sub_queries, tool_call_ids) :
                 # Step 2: 混合执行。针对每个子问题跑 ExcelRAG 和 SQL
                 reranked_docs, _, _ = self.retriever.retrieve(sub_query, 30, 5)
-                unique_retriebed_docs = list(set(reranked_docs))
-                doc_content = "\n".join([r for r in unique_retriebed_docs[:3]])
+                unique_retrieved_docs = list(dict.fromkeys(reranked_docs))
+                doc_content = "\n".join(unique_retrieved_docs[:3])
 
                 excel_rag_response_dict = get_excel_rag_response_plain(related_table_name_list, sub_query)
                 excel_rag_response = copy.deepcopy(excel_rag_response_dict)

@@ -156,7 +156,7 @@ def call_custom_llm_api(
 def get_llm_response(
     system_prompt: Optional[str],
     user_prompt: str,
-    model: str = "qwen2.5:72b",
+    model: str
 ) -> Optional[str]:
     model_config = model_request_config.get(model)
     if not model_config:
