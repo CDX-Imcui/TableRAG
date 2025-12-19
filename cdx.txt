@@ -10,7 +10,7 @@ sudo tar -xzf ollama-linux-amd64.tgz -C /usr
 
 
 tmux new -s ollama
-export CUDA_VISIBLE_DEVICES=1,2
+export CUDA_VISIBLE_DEVICES=0,1
 # 开启跨卡均衡调度      export OLLAMA_SCHED_SPREAD=1
 频繁重载 30B 很浪费时间 export OLLAMA_KEEP_ALIVE=5min
 ollama serve
